@@ -1,0 +1,120 @@
+/* estilo geral */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+    
+}
+body{
+    background-color: black;
+    height: 100vh;
+}
+.superior{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+.logo img{
+    width: 220px;
+    height: 50px;
+}
+/* estilo superior */
+header{
+    padding: 20px 4%;
+}
+header > .superior{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header a{
+    color: white;
+    text-decoration: none; /*tirar sublinhado, inline-block para o zoom da palavra funcionar*/
+    display: inline-block;   
+    transition: .2s;
+}
+header a:hover{
+    color:#597cff;
+    transform: scale(1.05); /*dar zoom na palavra*/
+}
+header nav ul{
+    list-style-type: none;
+}
+/* deixar uma do lado da outra */
+header nav ul li{
+    display: inline-block; 
+    padding: 0 50px;
+    font-size: 19px;
+}
+header .btn-contato button{
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #597cff;
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 30px;
+    width: 190px;
+    height: 50px;
+    transition: .2s;
+}
+header .btn-contato button:hover{
+    box-shadow: 0px 0px 8px #597cff;
+}
+.img-topo img{
+    width: 380px;
+    border-radius: 40px;
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
+    box-shadow:  5px 5px 1px #597cff;
+}
+/* estilo topo */
+section .topo-do-site{
+    padding: 40px 4%;
+    
+}
+.flex{
+    display: flex;
+}
+section .topo-do-site .flex{
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+}
+.topo-do-site h1{
+    color: white;
+    font-size: 50px;
+}
+.topo-do-site h1 span{
+    color: #597cff;
+    font-size: 50px;
+}
+.topo-do-site .txt-topo p{
+    color: white;
+    font-size: 25px;
+    margin: 35px 0;
+}
+main{
+    padding: 100px;
+    margin-right: 125px;
+}
+.txt-topo{
+    padding: 70px 4%;
+    
+}
+main .txt-topo{
+    margin-right: 20px;
+}
+@keyframes flutuar {
+    0%{
+        top: 0;
+    }
+    100%{
+        top: 30px;
+    }
+}
+
+
+
+
