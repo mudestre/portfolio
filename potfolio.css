@@ -18,6 +18,9 @@ body{
     width: 220px;
     height: 50px;
 }
+button:hover{
+    box-shadow: 0px 0px 8px #597cff;
+}
 /* estilo superior */
 header{
     padding: 20px 4%;
@@ -59,9 +62,7 @@ header .btn-contato button{
     height: 50px;
     transition: .2s;
 }
-header .btn-contato button:hover{
-    box-shadow: 0px 0px 8px #597cff;
-}
+
 .img-topo img{
     width: 380px;
     border-radius: 40px;
@@ -115,6 +116,142 @@ main .txt-topo{
     }
 }
 
+section.habilidades{
+    padding: 10px 4%;
+    margin-left: 50px;
+}
+h2.titulo{
+    color: white;
+    font-size: 38px;
+    text-align: center;
+}
+h2.titulo span{
+    color: #597cff;
+}
+.habilidades .habilidades-box{
+    color: white;
+    padding: 30px;
+    border: 2px solid white;
+    margin-top: 45px;
+    margin-right: 60px;
+    height: 380px;
+    border-radius: 20px;
+    transition: .2s;
+}
+.habilidades .habilidades-box:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 8px #597cff ;
+}
+.habilidades .habilidades-box i{
+    font-size: 70px;
+    color: #597cff;
+}
+.habilidades .habilidades-box h3{
+    font-size: 30px;
+    margin: 15px;
+}
+.flex{
+    margin-left: 100px;
+    gap: 25px;
+}
+/* estilo do sobre */
+section.sobre{
+    padding: 20px 4%;
+   
+}
+.linha{
+    border-top: 2px solid #597cff;
+    margin: 60px;
+    margin-right: 10px;
+}
+.sobre .txt-sobre{
+    color: white;
+    font-size: 20px;
+}
+section .sobre .flex{
+    align-items: center;
+    gap: 60px;
+}
+.sobre .txt-sobre h2{
+    font-size: 45px;
+    line-height: 40px; /*deixar proximos as linhas*/
+    margin-bottom: 30px;
+}
 
-
-
+.sobre .txt-sobre p{
+    font-size: 22px;
+    margin: 20px 0;
+    text-align: justify; /* tirar quebra de linhas, sem espaços no final*/
+}
+.sobre .txt-sobre .icons button{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 0;
+    font-size: 25px;
+    cursor: pointer;
+    margin: 0 4px;
+    background-color: #597cff;
+    color: white;
+    transition: .2s ;
+}
+.sobre .txt-sobre .icons button:hover{
+    background-color: white;
+    color:#597cff;
+    box-shadow: 0px 0px 5px white;
+} 
+/* maquina de escrever */
+.txt-sobre .maquina{
+    position: relative;
+}
+.txt-sobre .maquina::before{
+    content: "";
+    color: #597cff;
+    animation: palavras 20s infinite;
+}
+.txt-sobre .maquina::after{
+    content: "";
+    position: absolute;
+    height: 1em;
+    border-left: 2px solid #597cff;
+    right: -10px;
+    animation: cursor .7s infinite, digita 20s steps(15) infinite;
+    width: calc(100% + 30px);
+    background-color: black;
+}
+@keyframes digita {
+    10%, 15%, 30%, 35%, 50%, 55%, 70%, 75%, 90%, 95%{
+        width: 0; /*a barra ta no inicio, depois da palavra "você", então texto é visivel*/
+     }
+     5%, 20%, 25%, 40%, 45%, 60%, 65%, 80%, 85%{
+        width: calc(100% + 30px); /*a barra vai para o fim cobrindo toda a keyframe de palavras, "apagando ele"*/
+     }
+}
+@keyframes cursor {
+    0%, 100% {
+      border-left: 2px solid #597cff;
+    }
+    50% {
+      border-left: 2px solid transparent;
+    }
+  }
+  
+@keyframes palavras {
+    0%,20%{
+        content: "SOU GABRIELA"
+    }
+    21%,40%{
+        content: "SOU DEV INICIANTE";
+    }
+    41%,60%{
+        content: "SOU DEV FRONT-END";
+    }
+    61%,80%{
+        content: "SOU A GAROTA DO T.I";
+    }
+    81%,100%{
+        content: "AINDA EM APRENDIZADO :)";
+    }
+}
+/* fim maquina */
+/* voltar ao topo */
