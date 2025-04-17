@@ -6,6 +6,9 @@
     font-family: monospace;
     
 }
+html{
+    scroll-behavior: smooth;
+}
 body{
     background-color: black;
     height: 100vh;
@@ -117,12 +120,12 @@ main .txt-topo{
 }
 
 section.habilidades{
-    padding: 10px 4%;
+    padding: 100px 4%;
     margin-left: 50px;
 }
 h2.titulo{
     color: white;
-    font-size: 38px;
+    font-size: 45px;
     text-align: center;
 }
 h2.titulo span{
@@ -156,7 +159,8 @@ h2.titulo span{
 }
 /* estilo do sobre */
 section.sobre{
-    padding: 20px 4%;
+    padding: 60px 4%;
+    scroll-margin-top: 100px;
    
 }
 .linha{
@@ -203,6 +207,9 @@ section .sobre .flex{
 /* maquina de escrever */
 .txt-sobre .maquina{
     position: relative;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
 }
 .txt-sobre .maquina::before{
     content: "";
@@ -254,4 +261,257 @@ section .sobre .flex{
     }
 }
 /* fim maquina */
-/* voltar ao topo */
+/* PROJETOS */
+
+section.projetos{
+    padding: 80px 4%;
+}
+section.projetos .flex{
+    justify-content: space-around;
+    padding: 20px;
+}
+.img-port{
+    width: 360px;
+    height: 460px;
+    background-size: cover; /*deixando a imagem mais visivel*/
+    background-position: 100% 0%; /*posição*/
+    transition: .5s;
+    cursor: pointer;
+    border-radius: 20px;
+    position: relative;
+}
+/*acao para rolagem*/
+.img-port:hover{
+    background-position: 100% 100% /*o segundo 100% é para a imagem ir para o final*/
+}
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000b8;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-family: monospace;
+    color: white;
+    opacity: 0;
+    transition: .5s;
+}
+.overlay:hover{
+    opacity: 1 ;
+}
+.til{
+    font-size: 45px;
+    color: white;
+    text-align: center;
+    margin-left: 85px;
+}
+.til span{
+    color: #597cff;
+}
+/*rodapé*/
+footer{
+    padding: 50px 4% ;
+    background-color: #597cff;  
+}
+.line-footer{
+    border-bottom: 2px solid black;
+    padding-bottom: 20px;
+}
+.line-footer a{
+    color: black;
+    font-size: 15px;
+    font-family: monospace;
+    text-decoration: none;
+    transition: .2s;
+}
+.line-footer a:hover{
+    color: white;
+}
+.line-footer i{
+    width: 40px;
+    color: black;
+    font-size: 2rem;
+    cursor: pointer;
+}
+.line-footer3{
+    text-align: center;
+    font-size: 1.2rem;
+    padding-top: 20px; /*parte de cima*/
+    color: black;
+}
+.line-footer p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+/* responsivo */
+@media screen and (max-width: 1096px) {
+    header .superior {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        font-size: 30px;
+    }
+    header nav.menu a{
+        font-size: 25px;
+    }
+    header nav ul li {
+        padding: 10px;
+    }
+    .btn-contato{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 5%;
+        padding: 10px;
+    }
+    .flex {
+        flex-direction: column;
+        margin-left: 0;
+        gap: 40px;
+    }
+    .topo-do-site{
+        padding: 10px;
+    }
+    .topo-do-site h1,
+    .topo-do-site h1 span {
+        font-size: 50px;
+        text-align: center;
+        margin-left: 15%;
+    }
+
+    .topo-do-site .txt-topo p {
+        font-size: 30px;
+        text-align: center;
+        margin-left: 25%;
+        text-align: justify;
+    }
+
+    .img-topo img {
+        width: 380px;
+        margin: 0 auto;
+    }
+    .img-topo{
+        display: flex;
+        justify-content: center;
+        margin-left: 19%;
+    }
+    .habilidades .habilidades-box {
+        width: 90%;
+        margin-left: 10%;
+    }
+    .linha{
+       display: none;
+      
+    }
+    .titulo{
+        text-align: center;
+        font-size: 33px;
+        margin-left: 10%;
+    }
+    .img-port {
+        width: 100%;
+        height: 300px;
+    }
+    section.sobre{
+        display: flex;
+        justify-content: center;
+        margin-left: 15%;
+    }
+    section.projetos{
+        display: flex;
+        justify-content: center;
+        margin-left: 15%;
+    }
+    .til{
+        text-align: center;
+        font-size: 55px;
+        margin: 2px;
+    }
+}
+/* celular */
+@media screen and (max-width: 600px) {
+    header nav ul {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+    section.sobre{
+        padding: 10px;
+    }
+
+    header .btn-contato button {
+        width: 100%;
+    }
+
+    main {
+        padding: 50px 20px;
+        margin-right: 0;
+    }
+    header .superior .logo{
+        display: flex;
+        justify-content: center;
+        margin-left: 5%;
+    }
+
+    section.topo-do-site{
+        padding: 5px;
+    }
+    .img-topo img{
+        width: 280px;
+       margin: 0 auto;  
+    }
+    .img-topo{
+        display: flex;
+        justify-content: center;
+        margin-left: 2%;
+    }
+    section.projetos{
+        padding: 60px;
+    }
+    section.projetos .flex {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h2.titulo {
+        font-size: 30px;
+        text-align: center;
+        padding: 12px;
+    }
+
+    .sobre .txt-sobre h2 {
+        font-size: 30px;
+    }
+
+    .sobre .txt-sobre p {
+        font-size: 18px;
+    }
+    .txt-sobre .maquina::after{
+        height: 1.2em;
+    }
+    .til{
+        text-align: center;
+        font-size: 33px;
+        margin: 2px;
+    }
+    .linha{
+        margin: 2px;
+    }
+    section.habilidades .habilidades-box{
+        margin: 0 auto;
+    }
+    section.habilidades{
+
+        display: flex;
+        justify-content: center;
+        margin-left: 2%;
+    }
+}
